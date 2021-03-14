@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6d5a5af2-6edc-456c-a46a-417bfea557f4">
+  <producedTypes>
+    <objectType typeId="23b71e00-ee85-4e6f-adea-6c14ed5c3c9d" valueTypeId="10e8a9d8-f197-4c57-a422-bc08e0ab011d"/>
+    <refType typeId="611f66fb-847f-4510-90ab-04c94d2b7af0" valueTypeId="310c9776-bac6-4aa8-ac02-2dc9b4a0ce4e"/>
+    <selectionType typeId="f98031cd-47de-468a-ac4c-9cb84af090fd" valueTypeId="cfa4083d-f58b-418f-be7d-ea940c22556c"/>
+    <listType typeId="ebc63d97-688b-4015-93aa-b5f96ff6932b" valueTypeId="333241f1-1a0c-4ad6-bcd3-8d7b186268f6"/>
+    <managerType typeId="6ced0518-383c-41c8-b08a-8260547cfba0" valueTypeId="02d21584-c504-4185-8f56-d5499a64c79f"/>
+  </producedTypes>
+  <name>АбонементыКонтрагента</name>
+  <synonym>
+    <key>ru</key>
+    <value>Абонементы контрагента</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.АбонементыКонтрагента.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.АбонементыКонтрагента.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <owners>Catalog.Контрагенты</owners>
+  <codeLength>10</codeLength>
+  <descriptionLength>75</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="bc4fb437-4a16-4f02-aab6-89bd2dc81f2d">
+    <name>ВидАбонемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид абонемента</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыАбонементов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="50267e0c-e98d-44cf-8b4b-18b850c7fef2">
+    <name>ДатаНачала</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата начала</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="aa9f9ad4-7b42-49d9-9744-937504095f84">
+    <name>ФормаВыбораСОстатками</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора с остатками</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonPicture xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f0dde8ed-050c-4ffb-85e4-8ba22d76e9c4">
+  <name>Гербалайф_Горизонт</name>
+  <synonym>
+    <key>ru</key>
+    <value>Гербалайф горизонтальный логтип</value>
+  </synonym>
+</mdclass:CommonPicture>

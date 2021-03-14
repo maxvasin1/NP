@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e59cf911-72e1-46ef-8180-8ae75711dcf7">
+  <producedTypes>
+    <objectType typeId="61695ac6-2276-43ad-b377-833d4cde46b0" valueTypeId="22bbea4c-f2b2-4afc-9931-fb9ec6972c19"/>
+    <refType typeId="549d8894-8321-4ce8-b4ab-492607b6285b" valueTypeId="962f26f3-5fc1-49d2-9dcc-779bce43255e"/>
+    <selectionType typeId="78e7c26e-e598-45ae-980a-931099c0cd66" valueTypeId="0af17e53-2c28-4749-a333-4643e29fb7ee"/>
+    <listType typeId="8b401106-b8bb-4df8-9f3b-63f87da8310b" valueTypeId="5fbbbd17-0773-42ba-9a54-d729c67470f7"/>
+    <managerType typeId="dd34e379-8e8d-40ef-8043-11daa78b75e4" valueTypeId="a159d1cf-55c9-41b1-96a9-b04af0896406"/>
+  </producedTypes>
+  <name>ТипыЦенНоменклатуры</name>
+  <synonym>
+    <key>ru</key>
+    <value>Типы цен номенклатуры</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ТипыЦенНоменклатуры.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ТипыЦенНоменклатуры.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>10</codeLength>
+  <descriptionLength>75</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <predefined>
+    <items id="7823ffc3-ba9c-4ddb-98d7-82cced6fc83c">
+      <name>СтоимостьПорционногоТовара</name>
+      <description>Стоимость порционного товара</description>
+      <code xsi:type="core:StringValue">
+        <value>0000000001</value>
+      </code>
+    </items>
+  </predefined>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+</mdclass:Catalog>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonCommand xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2eb65f37-da02-40d4-87ec-749f29985969">
+  <name>НП_ДенежныеСредства</name>
+  <synonym>
+    <key>ru</key>
+    <value>Денежные средства</value>
+  </synonym>
+  <group>FormNavigationPanelGoTo</group>
+  <commandParameterType>
+    <types>DocumentRef.ПоступлениеТоваров</types>
+    <types>DocumentRef.ДвиженияДенежныхСредств</types>
+    <types>DocumentRef.Посещение</types>
+    <types>DocumentRef.ПродажаАбонемента</types>
+    <types>DocumentRef.РеализацияТоваров</types>
+  </commandParameterType>
+  <representation>Auto</representation>
+  <shortcut></shortcut>
+</mdclass:CommonCommand>

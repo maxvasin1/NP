@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e65ae5dd-07e5-4dc2-9d58-3b8f39d9045a">
+  <producedTypes>
+    <selectionType typeId="fef98e1c-21c0-4f85-a93b-21f844c631b8" valueTypeId="d032ef6a-6a54-4a47-959b-d18e845f6afd"/>
+    <listType typeId="245be6ae-891e-4bac-b3c9-5da29b97c284" valueTypeId="45f3b701-17ed-498d-8e0d-c8a1cf08b630"/>
+    <managerType typeId="dcfca5cd-60be-42e4-a9ca-0c9c5677287b" valueTypeId="6dec4388-8bd0-4c08-a063-ec4d99c79f7a"/>
+    <recordSetType typeId="88d377c0-5b92-4c7f-946b-ab4711129e0b" valueTypeId="978e28d1-a570-4eff-807c-f9f0d2fbddde"/>
+    <recordKeyType typeId="1b0bb97e-69d8-4e72-a2bd-4c42772395de" valueTypeId="3177996b-7b82-4fb5-8251-50c2b45aa2a4"/>
+    <recordType typeId="f3d53b1e-e0ca-4888-a2ab-c884b419ce32" valueTypeId="84559143-d7dc-4636-97c5-fe6b9ff75619"/>
+  </producedTypes>
+  <name>АбонементыКонтрагентов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Абонементы контрагентов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="cbb0b753-1662-4926-b89a-0b73e8b3451c">
+    <name>ЧислоПосещений</name>
+    <synonym>
+      <key>ru</key>
+      <value>Число посещений</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="681d5ed7-092b-426f-94b2-8438ca156158">
+    <name>Стоимость</name>
+    <synonym>
+      <key>ru</key>
+      <value>Стоимость</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="daefa2f8-4382-4936-943b-97c8dc4aa128">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="ed0818dc-9b92-454b-b01d-69ba936ef21b">
+    <name>Абонемент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Абонемент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.АбонементыКонтрагента</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

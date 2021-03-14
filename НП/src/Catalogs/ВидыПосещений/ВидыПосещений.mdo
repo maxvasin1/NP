@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a4bd144c-d4c6-4dcc-b7f0-304f715aab82">
+  <producedTypes>
+    <objectType typeId="8377df0e-6361-4539-b5d5-a4ee3009be0a" valueTypeId="ad87e31f-e596-416d-97e4-6afdeac054d2"/>
+    <refType typeId="805dcfed-21d6-40de-9897-f3821ab56c79" valueTypeId="e303f57a-822e-40b2-943c-b57ae2826dc4"/>
+    <selectionType typeId="dcc67153-a5e6-4070-ae5e-c9156cfd25ed" valueTypeId="575dd164-4ffb-4e95-92b0-3f0369ab7480"/>
+    <listType typeId="5a18d197-2076-4633-9d92-cfc276694403" valueTypeId="012eb9fe-0dd3-477b-84ed-0dc92bfbae86"/>
+    <managerType typeId="9ec0b376-9dfd-4e75-a996-085c37d73eed" valueTypeId="84aa89db-79f5-4021-b21c-a13624f200bf"/>
+  </producedTypes>
+  <name>ВидыПосещений</name>
+  <synonym>
+    <key>ru</key>
+    <value>Виды посещений</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ВидыПосещений.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ВидыПосещений.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Вид посещения</value>
+  </objectPresentation>
+  <extendedObjectPresentation>
+    <key>ru</key>
+    <value>Состав продукта для посещений</value>
+  </extendedObjectPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Виды посещений</value>
+  </listPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>10</codeLength>
+  <descriptionLength>75</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <tabularSections uuid="42830edd-357a-4b44-984f-727c3d5ec168">
+    <producedTypes>
+      <objectType typeId="dfde7a8b-8e55-4244-812c-ad927a21ac0c" valueTypeId="71b36767-4188-407c-8448-f2d928ada551"/>
+      <rowType typeId="3418b40e-991a-4d71-aa9e-75532f9fe55a" valueTypeId="cacbc42e-1239-4006-8dc0-bf12ed704b81"/>
+    </producedTypes>
+    <name>Состав</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состав</value>
+    </synonym>
+    <attributes uuid="29b17dec-4657-482d-9beb-dbced2e6ce0c">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="2f48c057-692a-4839-9910-983a53dcb78f">
+      <name>КоличествоПродукта</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество продукта</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Catalog>

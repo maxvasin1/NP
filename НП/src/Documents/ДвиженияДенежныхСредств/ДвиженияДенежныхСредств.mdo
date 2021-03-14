@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3fadd7d1-d30b-4f17-aca7-375263bbe595">
+  <producedTypes>
+    <objectType typeId="201eae03-2869-4819-8589-ad9de6309104" valueTypeId="50075eb8-1ac6-42dd-be0c-81870914b493"/>
+    <refType typeId="6a33cb58-e3b4-45d7-9a0d-bc50c7f82fb5" valueTypeId="425e890d-6766-406d-b67f-f2d8f56cf837"/>
+    <selectionType typeId="63abea62-fa42-4747-85a9-475c03bda885" valueTypeId="3ab67343-659e-4939-940e-158accca4dd2"/>
+    <listType typeId="948b0f9d-bc5f-40b0-9eff-4c5b55c2b168" valueTypeId="0fb5bc66-0ff4-488e-ae50-b1a512a94a26"/>
+    <managerType typeId="1e20e877-46d9-4a94-9553-d427bf836ee6" valueTypeId="8c3744c0-0b7d-4557-af47-be296f89027f"/>
+  </producedTypes>
+  <name>ДвиженияДенежныхСредств</name>
+  <synonym>
+    <key>ru</key>
+    <value>Движения денежных средств</value>
+  </synonym>
+  <comment>Поступление/расход денежных средств</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ДвиженияДенежныхСредств.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ДвиженияДенежныхСредств.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.ДвиженияДенежныхСредств.Form.ФормаСписка</defaultListForm>
+  <registerRecords>AccumulationRegister.Взаиморасчеты</registerRecords>
+  <registerRecords>AccumulationRegister.ДенежныеСредства</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="fdbaaa77-f982-4153-bec7-903df0abc5e9">
+    <name>ВидОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид операции</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыОперцийДвиженияДенежныхСредств</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d4139189-c6cf-4fbb-bc75-1b9cea66d14f">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="2fe534dd-684f-4b02-a5d0-f35cacdb1fc0">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="ba3f9aea-5984-4939-8d43-a829b06f756b">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="8c0cab99-8497-4708-99da-10c180d8a2e2">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Document>

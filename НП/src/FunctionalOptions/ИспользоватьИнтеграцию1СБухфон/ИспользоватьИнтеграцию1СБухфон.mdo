@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:FunctionalOption xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="00e48a23-eb5b-4a29-b36c-218ab9760f23">
+  <name>ИспользоватьИнтеграцию1СБухфон</name>
+  <synonym>
+    <key>ru</key>
+    <value>Использовать онлайн-поддержку</value>
+  </synonym>
+  <location>Constant.ИспользоватьИнтеграцию1СБухфон</location>
+  <privilegedGetMode>true</privilegedGetMode>
+  <content>CommonCommand.Настройка1СБухфон</content>
+  <content>CommonForm.Настройка1СБухфон</content>
+  <content>CommonForm.ПоискИсполняемогоФайла1СБухфон</content>
+  <content>CommonCommand.Запустить1СБухфон</content>
+</mdclass:FunctionalOption>

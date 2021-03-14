@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bc090c14-bdfc-4c93-a15f-3ab6ec6a9cd6">
+  <producedTypes>
+    <objectType typeId="0ccfb53e-cea7-4465-9af7-21b2d3d5dc97" valueTypeId="3a019536-708a-4f45-9445-6dc40ad61062"/>
+    <refType typeId="f9e4465a-bbb0-4479-b740-66a2a919b153" valueTypeId="0bc876ed-a679-4391-a9a1-cda3e2e202b6"/>
+    <selectionType typeId="22272860-14fc-47ca-a9fd-3fad2f1452b6" valueTypeId="fef56c93-a898-4a82-8434-186796db1df6"/>
+    <listType typeId="20ff2209-2673-431c-8fd3-c4d5fd6a3e98" valueTypeId="e84f8569-3e71-4e62-9db6-3836b92b3a7c"/>
+    <managerType typeId="1d5d8e12-46d8-4acd-bd70-59cbfa363147" valueTypeId="90d32b04-3a77-48cf-b84d-149980cdde7a"/>
+  </producedTypes>
+  <name>Номенклатура</name>
+  <synonym>
+    <key>ru</key>
+    <value>Номенклатура</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.Номенклатура.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.Номенклатура.StandardAttribute.Code</inputByString>
+  <inputByString>Catalog.Номенклатура.Attribute.Артикул</inputByString>
+  <searchStringModeOnInputByString>AnyPart</searchStringModeOnInputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <characteristics>
+    <characteristicTypes>Catalog.НаборыДополнительныхРеквизитовИСведений.TabularSection.ДополнительныеСведения</characteristicTypes>
+    <keyField>Catalog.НаборыДополнительныхРеквизитовИСведений.TabularSection.ДополнительныеСведения.Attribute.Свойство</keyField>
+    <typesFilterField>Catalog.НаборыДополнительныхРеквизитовИСведений.TabularSection.ДополнительныеСведения.StandardAttribute.Ref</typesFilterField>
+    <typesFilterValue xsi:type="core:ReferenceValue">
+      <value>Catalog.НаборыДополнительныхРеквизитовИСведений.Справочник_Номенклатура</value>
+    </typesFilterValue>
+    <characteristicValues>InformationRegister.ДополнительныеСведения</characteristicValues>
+    <objectField>InformationRegister.ДополнительныеСведения.Dimension.Объект</objectField>
+    <typeField>InformationRegister.ДополнительныеСведения.Dimension.Свойство</typeField>
+    <valueField>InformationRegister.ДополнительныеСведения.Resource.Значение</valueField>
+  </characteristics>
+  <characteristics>
+    <characteristicTypes>Catalog.НаборыДополнительныхРеквизитовИСведений.TabularSection.ДополнительныеРеквизиты</characteristicTypes>
+    <keyField>Catalog.НаборыДополнительныхРеквизитовИСведений.TabularSection.ДополнительныеРеквизиты.Attribute.Свойство</keyField>
+    <typesFilterField>Catalog.НаборыДополнительныхРеквизитовИСведений.TabularSection.ДополнительныеРеквизиты.StandardAttribute.Ref</typesFilterField>
+    <typesFilterValue xsi:type="core:ReferenceValue">
+      <value>Catalog.НаборыДополнительныхРеквизитовИСведений.Справочник_Номенклатура</value>
+    </typesFilterValue>
+    <characteristicValues>Catalog.Номенклатура.TabularSection.ДополнительныеРеквизиты</characteristicValues>
+    <objectField>Catalog.Номенклатура.TabularSection.ДополнительныеРеквизиты.StandardAttribute.Ref</objectField>
+    <typeField>Catalog.Номенклатура.TabularSection.ДополнительныеРеквизиты.Attribute.Свойство</typeField>
+    <valueField>Catalog.Номенклатура.TabularSection.ДополнительныеРеквизиты.Attribute.Значение</valueField>
+  </characteristics>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Номенклатура</value>
+  </objectPresentation>
+  <hierarchical>true</hierarchical>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>10</codeLength>
+  <descriptionLength>75</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <predefined>
+    <items id="738c4456-e15a-4632-a303-60f5a334a0bc">
+      <name>ПорционныеПродукты</name>
+      <description>Порционные продукты</description>
+      <code xsi:type="core:StringValue">
+        <value>0000000001</value>
+      </code>
+      <isFolder>true</isFolder>
+      <content id="870882cf-0aaa-4c0f-ba7e-8b2809c6faa6">
+        <name>БелокПорционный</name>
+        <description>Белок порционный</description>
+        <code xsi:type="core:StringValue">
+          <value>0000000002</value>
+        </code>
+      </content>
+    </items>
+  </predefined>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.Номенклатура.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.Номенклатура.Form.ФормаСписка</defaultListForm>
+  <attributes uuid="32080daf-95c1-4752-a4a0-d2610211e3bb">
+    <name>КоличествоОчков</name>
+    <synonym>
+      <key>ru</key>
+      <value>Очки</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7432ff19-c130-4d36-bb22-fe9699773439">
+    <name>Артикул</name>
+    <synonym>
+      <key>ru</key>
+      <value>Артикул</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="73a0eca8-be0f-40b4-97a2-1ca29da3aba9">
+    <name>ФайлКартинки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Файл картинки</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НоменклатураПрисоединенныеФайлы</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Ссылка на файл картинки номенклатуры</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="abc757f6-f9a5-46c3-abcd-d55c78d739ab">
+    <name>ПорционныйПродукт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Порционный продукт</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="7efc627c-9052-40dd-bbfa-e4a27c93e7e0">
+    <producedTypes>
+      <objectType typeId="554e9006-0cb9-46d8-becf-18c7a2ce62a2" valueTypeId="8e3f581d-53e2-4ece-8615-52c50d973dd5"/>
+      <rowType typeId="d849c2e5-da47-4e2e-a2ef-7856a067cd51" valueTypeId="14e972ac-4ef5-4f2c-8e26-e4ec615f4152"/>
+    </producedTypes>
+    <name>ДополнительныеРеквизиты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дополнительные реквизиты</value>
+    </synonym>
+    <toolTip>
+      <key>ru</key>
+      <value>Дополнительные реквизиты объекта</value>
+    </toolTip>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="c5846025-0908-4fd5-ad27-2eb879e6b8d4">
+      <name>Свойство</name>
+      <synonym>
+        <key>ru</key>
+        <value>Свойство</value>
+      </synonym>
+      <type>
+        <types>ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Дополнительный реквизит</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <quickChoice>DontUse</quickChoice>
+      <createOnInput>Use</createOnInput>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="7fdc09ae-a581-41e1-9626-3d7372cbee86">
+      <name>Значение</name>
+      <synonym>
+        <key>ru</key>
+        <value>Значение</value>
+      </synonym>
+      <type>
+        <types>Characteristic.ДополнительныеРеквизитыИСведения</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Значение дополнительного реквизита</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>Catalog.Номенклатура.TabularSection.ДополнительныеРеквизиты.Attribute.Свойство</field>
+      </choiceParameterLinks>
+      <quickChoice>DontUse</quickChoice>
+      <createOnInput>Use</createOnInput>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="2e85608d-94b0-412a-9df7-bcd7fdf9bb62">
+      <name>ТекстоваяСтрока</name>
+      <synonym>
+        <key>ru</key>
+        <value>Текстовая строка</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Полный текст строкового дополнительного реквизита</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <forms uuid="10391e7f-a0c1-436e-9817-8a3afc469334">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="60925b42-d3f2-411a-8de0-ee4d72571ada">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

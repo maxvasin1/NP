@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="31bb6c0c-4806-4848-983c-61522813ff45">
+  <producedTypes>
+    <selectionType typeId="e9275e67-0eb2-444f-b083-a3da6640e0ad" valueTypeId="1a976b58-4a06-4968-80b3-94b8ffa28588"/>
+    <listType typeId="7a72dfc1-7882-4e39-8a1d-669665331f3e" valueTypeId="82e94bd5-9b20-49d9-a847-03d4dd83a425"/>
+    <managerType typeId="838751c3-5300-4d15-995f-023dc7d40abe" valueTypeId="d27c27f3-84c4-47b5-a06c-70e47c2ac5b8"/>
+    <recordSetType typeId="6a4c9b9f-1131-4321-aac9-168ba1794e16" valueTypeId="665f5677-52e5-42b4-a03e-36d47aa04077"/>
+    <recordKeyType typeId="4a14b59a-27e5-4f8c-8ada-b287543081a8" valueTypeId="7f0939ab-1bc8-492f-a4e8-40313af36999"/>
+    <recordType typeId="c29ec99a-d972-4c1e-9b19-aaf876e18d73" valueTypeId="8dbeeb56-f769-4a05-872e-4e8b391120bf"/>
+  </producedTypes>
+  <name>Посещения</name>
+  <synonym>
+    <key>ru</key>
+    <value>Посещения</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <registerType>Turnovers</registerType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="8cb47c77-079b-4ea1-bc3f-e49fdcb3e2bc">
+    <name>КоличествоПосещений</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество посещений</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="e00f2c91-c2d2-4d9b-8973-d19c237478bf">
+    <name>Клуб</name>
+    <synonym>
+      <key>ru</key>
+      <value>Клуб</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="5372ffcc-97b9-4151-b47b-d4847928e52a">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="2f0f8a12-c96f-4420-bb16-e07cf13782ab">
+    <name>Абонемент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Абонемент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.АбонементыКонтрагента</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="e63a3bdd-cc2d-4455-95b4-88dddcefb735">
+    <name>ВидПосещения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид посещения</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыПосещений</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonCommand xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="514fdf2d-dd80-4958-9439-844632c45894">
+  <name>НП_АбонементыКонтрагентов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Абонементы контрагентов</value>
+  </synonym>
+  <group>FormNavigationPanelGoTo</group>
+  <commandParameterType>
+    <types>DocumentRef.Посещение</types>
+    <types>DocumentRef.ПродажаАбонемента</types>
+  </commandParameterType>
+  <representation>Auto</representation>
+  <shortcut></shortcut>
+</mdclass:CommonCommand>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonCommand xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0532077d-aecc-495e-aa75-3f5b65adc151">
+  <name>НП_Порционность</name>
+  <synonym>
+    <key>ru</key>
+    <value>Порционность</value>
+  </synonym>
+  <group>FormNavigationPanelGoTo</group>
+  <commandParameterType>
+    <types>DocumentRef.УстановкаПорционности</types>
+  </commandParameterType>
+  <representation>Auto</representation>
+  <shortcut></shortcut>
+</mdclass:CommonCommand>

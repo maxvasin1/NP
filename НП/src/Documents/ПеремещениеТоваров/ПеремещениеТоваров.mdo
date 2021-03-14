@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d392ab52-607d-45c3-a228-ef89c57ba1b0">
+  <producedTypes>
+    <objectType typeId="44592553-f293-4c19-a88c-32ac5b93b2cd" valueTypeId="258147d3-e072-4733-9b6e-92f10a8a7657"/>
+    <refType typeId="14bf8759-89ab-4e8b-acfd-8c507670463e" valueTypeId="8f5bd5bb-a619-4364-919e-c8df8935d97a"/>
+    <selectionType typeId="8f13c447-b377-4326-b518-e6462546edcb" valueTypeId="7a6ce621-26e6-4eb5-81e6-899cf5bf04b2"/>
+    <listType typeId="ade9388c-2143-4ad8-8057-4e1073abf504" valueTypeId="88532f11-d85a-4494-ba83-e011211aec58"/>
+    <managerType typeId="2cd8aa20-7005-4696-a97e-c21fa498095e" valueTypeId="4dcf6085-2076-4349-a11e-2b0d0f5df540"/>
+  </producedTypes>
+  <name>ПеремещениеТоваров</name>
+  <synonym>
+    <key>ru</key>
+    <value>Перемещение товаров</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ПеремещениеТоваров.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>10</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ПеремещениеТоваров.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.ПеремещениеТоваров.Form.ФормаСписка</defaultListForm>
+  <registerRecords>AccumulationRegister.ТоварыНаСкладах</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="242d217c-ecf7-4bb0-8e7a-3c33a779d372">
+    <name>СкладОтправитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад отправитель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e83af529-b655-4977-9996-25d1730bc0c0">
+    <name>СкладПолучатель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад получатель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7fd3409d-209b-40fe-bfbd-ab42cf0e0190">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="92c62fe2-4e5c-4953-819d-2f83f3613525">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="5141496e-3454-4526-ae6e-a5392ffa6e0c">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="1855f9e7-ea3f-451a-a5f8-896db5f7ebe4">
+    <producedTypes>
+      <objectType typeId="10d4b6ba-8be9-4c99-be4c-bb7380e95768" valueTypeId="5a0fa220-a1e7-4178-9300-7f349718140e"/>
+      <rowType typeId="a1089fc3-1a96-4ae6-b7e8-02918ad7b640" valueTypeId="4d633a18-b223-4eb6-804b-24af67030721"/>
+    </producedTypes>
+    <name>Товары</name>
+    <synonym>
+      <key>ru</key>
+      <value>Товары</value>
+    </synonym>
+    <attributes uuid="6d96a143-a18e-4ae1-afd8-ae6981e3d560">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="89a62b4b-ea07-40db-b510-2a8672f6959d">
+      <name>Количество</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <templates uuid="8ebe0899-806b-4987-913c-1b1564baeb6d">
+    <name>ПФ_MXL_НакладнаяНаПеремещение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Накладная на перемещение</value>
+    </synonym>
+  </templates>
+</mdclass:Document>

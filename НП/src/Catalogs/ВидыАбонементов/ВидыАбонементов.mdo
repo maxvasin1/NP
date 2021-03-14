@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="119d8878-86f1-45b3-81ac-e319171ee746">
+  <producedTypes>
+    <objectType typeId="ddc28524-0819-4f16-a2c2-ed571b1d98f9" valueTypeId="0603b2ee-2e73-480f-aa78-06856051cc4e"/>
+    <refType typeId="f0f0d402-3c18-4fc7-9186-e662ebbf60c5" valueTypeId="fdfe6902-68d2-4afb-84df-0a49eb56f2da"/>
+    <selectionType typeId="1299f4ca-d216-456a-b0d3-e55f786e24b9" valueTypeId="d8283941-ecba-4c7e-9609-3c0cdeff3482"/>
+    <listType typeId="3e8a7500-feae-451c-ace0-b380f593e079" valueTypeId="cb6a0e6c-b598-4991-80d4-bc445ceaf6e3"/>
+    <managerType typeId="017b13de-8614-43ad-af8f-672ec827f6cd" valueTypeId="791d10f3-c105-4499-ae23-0e04827a720b"/>
+  </producedTypes>
+  <name>ВидыАбонементов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Виды абонементов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ВидыАбонементов.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ВидыАбонементов.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>50</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <predefined>
+    <items id="6cd694ed-4b40-4ea4-8aab-5954ae5b2e28">
+      <name>АбонементРазовый</name>
+      <description>Абонемент разовый</description>
+      <code xsi:type="core:StringValue">
+        <value>000000001</value>
+      </code>
+    </items>
+  </predefined>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="7f713c8d-c865-425f-855e-3d7ee025829e">
+    <name>КоличествоПосещений</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество посещений</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>3</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+</mdclass:Catalog>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:FunctionalOption xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0dcc3bbf-afbe-4a4e-bc4a-17534d5fab28">
+  <name>ИспользоватьЭлектронныеПодписи</name>
+  <synonym>
+    <key>ru</key>
+    <value>Использовать электронные подписи</value>
+  </synonym>
+  <location>Constant.ИспользоватьЭлектронныеПодписи</location>
+  <privilegedGetMode>true</privilegedGetMode>
+  <content>Catalog.ПрограммыЭлектроннойПодписиИШифрования.Attribute.АлгоритмПодписи</content>
+  <content>Catalog.ПрограммыЭлектроннойПодписиИШифрования.Attribute.АлгоритмХеширования</content>
+  <content>Catalog.ВерсииФайлов.Attribute.ПодписанЭП</content>
+  <content>Catalog.ВерсииФайлов.TabularSection.ЭлектронныеПодписи</content>
+  <content>Catalog.ВстречаПрисоединенныеФайлы.TabularSection.ЭлектронныеПодписи</content>
+  <content>Catalog.ВстречаПрисоединенныеФайлы.Attribute.ПодписанЭП</content>
+  <content>Catalog.ЗапланированноеВзаимодействиеПрисоединенныеФайлы.Attribute.ПодписанЭП</content>
+  <content>Catalog.ЗапланированноеВзаимодействиеПрисоединенныеФайлы.TabularSection.ЭлектронныеПодписи</content>
+  <content>Catalog.СообщениеSMSПрисоединенныеФайлы.Attribute.ПодписанЭП</content>
+  <content>Catalog.СообщениеSMSПрисоединенныеФайлы.TabularSection.ЭлектронныеПодписи</content>
+  <content>Catalog.ТелефонныйЗвонокПрисоединенныеФайлы.Attribute.ПодписанЭП</content>
+  <content>Catalog.ТелефонныйЗвонокПрисоединенныеФайлы.TabularSection.ЭлектронныеПодписи</content>
+  <content>Catalog.Файлы.Attribute.ПодписанЭП</content>
+  <content>Catalog.ЭлектронноеПисьмоВходящееПрисоединенныеФайлы.Attribute.ПодписанЭП</content>
+  <content>Catalog.ЭлектронноеПисьмоВходящееПрисоединенныеФайлы.TabularSection.ЭлектронныеПодписи</content>
+  <content>Catalog.ЭлектронноеПисьмоИсходящееПрисоединенныеФайлы.Attribute.ПодписанЭП</content>
+  <content>Catalog.ЭлектронноеПисьмоИсходящееПрисоединенныеФайлы.TabularSection.ЭлектронныеПодписи</content>
+</mdclass:FunctionalOption>

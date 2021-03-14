@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0e3c6508-caa3-43ef-9647-0e3b96955898">
+  <producedTypes>
+    <objectType typeId="b4ef2850-ff00-4bf4-acc4-3943ccf1e751" valueTypeId="75352e06-db62-4fd2-9a0f-566c24c701c7"/>
+    <managerType typeId="b8ea8ecc-d616-4962-937d-9f22a0f939e7" valueTypeId="7752f0ea-c70c-4535-a235-a18ee0190782"/>
+  </producedTypes>
+  <name>ИнструментыРазработчикаПроверкаКонтрагентов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Инструменты разработчика: проверка контрагентов</value>
+  </synonym>
+  <defaultForm>DataProcessor.ИнструментыРазработчикаПроверкаКонтрагентов.Form.Форма</defaultForm>
+  <forms uuid="ceb18abf-0390-450c-9e4c-cab9e43eb2e8">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="1b1fa685-dccb-4d0f-ac01-adc6febf7f15">
+    <name>ИнструментыРазработчика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Инструменты разработчика</value>
+    </synonym>
+    <group>NavigationPanelOrdinary</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:DataProcessor>

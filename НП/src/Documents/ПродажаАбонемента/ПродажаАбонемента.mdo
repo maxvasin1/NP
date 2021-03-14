@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="82b3b0db-81cc-4985-85a8-ac9dbffc8738">
+  <producedTypes>
+    <objectType typeId="5f114de8-0e5e-49b6-b076-8044783c1c70" valueTypeId="ccdbcab8-af15-40f3-ad04-259c6d2ce57f"/>
+    <refType typeId="c529cc6c-45d3-47a0-8ac6-4ee124fd63c6" valueTypeId="52699dc0-0bbb-4477-b04e-7ec7b759ac84"/>
+    <selectionType typeId="98633cd9-794d-43bf-874e-f548bb8305fa" valueTypeId="72f11cb4-ef42-4659-88ac-7c8da64726dd"/>
+    <listType typeId="b2114cf7-c9f7-41f2-9066-31973ab04143" valueTypeId="1be7f015-1be1-42fc-81d0-5273bfa1abcf"/>
+    <managerType typeId="69155b8c-3b74-4370-bed6-2224bb0533a1" valueTypeId="1a165b42-9c59-46f5-980a-a893ef8dfa26"/>
+  </producedTypes>
+  <name>ПродажаАбонемента</name>
+  <synonym>
+    <key>ru</key>
+    <value>Продажа абонемента</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ПродажаАбонемента.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Продажа абонемента</value>
+  </objectPresentation>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ПродажаАбонемента.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.ПродажаАбонемента.Form.ФормаСписка</defaultListForm>
+  <registerRecords>AccumulationRegister.Взаиморасчеты</registerRecords>
+  <registerRecords>AccumulationRegister.ДенежныеСредства</registerRecords>
+  <registerRecords>AccumulationRegister.АбонементыКонтрагентов</registerRecords>
+  <registerRecords>AccumulationRegister.Продажи</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="67052bf2-9cac-4dc0-b879-a572ca687364">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Произвольный текст</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="04a506aa-5d4a-41bf-8054-9b5e7a575141">
+    <name>КраткийСоставДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Краткий состав документа</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="e1f3db1f-5f71-42e8-ad54-c2e79a49e985">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="5d6988ed-a417-4663-ae5b-c5faf28648e6">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="834d789e-eecc-4fce-8111-807c241cfe09">
+    <producedTypes>
+      <objectType typeId="1d24a546-3b8e-48a6-9d00-285e3d3d573f" valueTypeId="b83a00e0-c842-4728-95d0-126fe2f80109"/>
+      <rowType typeId="c3a91365-9cff-4903-8183-1f457b4df2a2" valueTypeId="5ed48994-c5e3-4792-aca5-1a8dff86a3b0"/>
+    </producedTypes>
+    <name>Контрагенты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагенты</value>
+    </synonym>
+    <attributes uuid="8ac0e5f3-e2fd-4e30-b260-073c782c5586">
+      <name>Контрагент</name>
+      <synonym>
+        <key>ru</key>
+        <value>Контрагент</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Контрагенты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="33fb795d-e99b-4a30-81ba-fdb21c26589c">
+      <name>ВидАбонемента</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид абонемента</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ВидыАбонементов</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="250bc901-a94a-48c2-a4c3-6f68bfd28949">
+      <name>Стоимость</name>
+      <synonym>
+        <key>ru</key>
+        <value>Стоимость</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="8088fa9d-a04b-47da-82ac-d5efc03e1ee8">
+      <name>Оплачено</name>
+      <synonym>
+        <key>ru</key>
+        <value>Оплачено</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a0780322-54cb-4c4e-b7c0-58ef1dbab5c8">
+      <name>Абонемент</name>
+      <synonym>
+        <key>ru</key>
+        <value>Абонемент</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.АбонементыКонтрагента</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

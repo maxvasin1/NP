@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Посещения</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПосещенийОборот</dataPath>
+			<field>КоличествоПосещенийОборот</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Абонемент</dataPath>
+			<field>Абонемент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Клуб</dataPath>
+			<field>Клуб</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидПосещения</dataPath>
+			<field>ВидПосещения</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодДень</dataPath>
+			<field>ПериодДень</field>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ПосещенияОбороты.Контрагент,
+	ВЫБОР
+		КОГДА ПосещенияОбороты.Абонемент &lt;&gt; ЗНАЧЕНИЕ(Справочник.АбонементыКонтрагента.ПустаяСсылка)
+			ТОГДА ПосещенияОбороты.Абонемент
+		ИНАЧЕ "Разовое посещение"
+	КОНЕЦ КАК Абонемент,
+	ПосещенияОбороты.ПериодДень,
+	ПосещенияОбороты.КоличествоПосещенийОборот,
+	ПосещенияОбороты.ВидПосещения
+ИЗ
+	РегистрНакопления.Посещения.Обороты(, , Авто, ) КАК ПосещенияОбороты</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Абонементы</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьОборот</dataPath>
+			<field>СтоимостьОборот</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьНачальныйОстаток</dataPath>
+			<field>СтоимостьНачальныйОстаток</field>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>Стоимость</dcscom:balanceGroupName>
+				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Абонемент</dataPath>
+			<field>Абонемент</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьКонечныйОстаток</dataPath>
+			<field>СтоимостьКонечныйОстаток</field>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>Стоимость</dcscom:balanceGroupName>
+				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодДень</dataPath>
+			<field>ПериодДень</field>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьРасход</dataPath>
+			<field>СтоимостьРасход</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьПриход</dataPath>
+			<field>СтоимостьПриход</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	АбонементыКонтрагентовОстаткиИОбороты.Контрагент,
+	АбонементыКонтрагентовОстаткиИОбороты.Абонемент,
+	АбонементыКонтрагентовОстаткиИОбороты.СтоимостьНачальныйОстаток,
+	АбонементыКонтрагентовОстаткиИОбороты.СтоимостьКонечныйОстаток,
+	АбонементыКонтрагентовОстаткиИОбороты.СтоимостьОборот,
+	АбонементыКонтрагентовОстаткиИОбороты.ПериодДень,
+	АбонементыКонтрагентовОстаткиИОбороты.СтоимостьПриход,
+	АбонементыКонтрагентовОстаткиИОбороты.СтоимостьРасход
+ИЗ
+	РегистрНакопления.АбонементыКонтрагентов.ОстаткиИОбороты(, , Авто, ДвиженияИГраницыПериода, ) КАК АбонементыКонтрагентовОстаткиИОбороты</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>КонтрагентыИАбонементы</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Абонемент</dataPath>
+			<field>Абонемент</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Клуб</dataPath>
+			<field>Клуб</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидПосещения</dataPath>
+			<field>ВидПосещения</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ПосещенияОбороты.Контрагент,
+	ВЫБОР
+		КОГДА ПосещенияОбороты.Абонемент &lt;&gt; ЗНАЧЕНИЕ(Справочник.АбонементыКонтрагента.ПустаяСсылка)
+			ТОГДА ПосещенияОбороты.Абонемент
+		ИНАЧЕ "Разовое посещение"
+	КОНЕЦ КАК Абонемент
+ИЗ
+	РегистрНакопления.Посещения.Обороты(, , Авто, ) КАК ПосещенияОбороты
+	
+	Объединить все
+ВЫБРАТЬ
+	АбонементыКонтрагентовОстаткиИОбороты.Контрагент,
+	АбонементыКонтрагентовОстаткиИОбороты.Абонемент
+ИЗ
+	РегистрНакопления.АбонементыКонтрагентов.ОстаткиИОбороты(, , Авто, ДвиженияИГраницыПериода, ) КАК АбонементыКонтрагентовОстаткиИОбороты	</query>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>Посещения</sourceDataSet>
+		<destinationDataSet>Абонементы</destinationDataSet>
+		<sourceExpression>Контрагент</sourceExpression>
+		<destinationExpression>Контрагент</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>Посещения</sourceDataSet>
+		<destinationDataSet>Абонементы</destinationDataSet>
+		<sourceExpression>Абонемент</sourceExpression>
+		<destinationExpression>Абонемент</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>КонтрагентыИАбонементы</sourceDataSet>
+		<destinationDataSet>Посещения</destinationDataSet>
+		<sourceExpression>Контрагент</sourceExpression>
+		<destinationExpression>Контрагент</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>КонтрагентыИАбонементы</sourceDataSet>
+		<destinationDataSet>Посещения</destinationDataSet>
+		<sourceExpression>Абонемент</sourceExpression>
+		<destinationExpression>Абонемент</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>КонтрагентыИАбонементы</sourceDataSet>
+		<destinationDataSet>Абонементы</destinationDataSet>
+		<sourceExpression>Контрагент</sourceExpression>
+		<destinationExpression>Контрагент</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>КонтрагентыИАбонементы</sourceDataSet>
+		<destinationDataSet>Абонементы</destinationDataSet>
+		<sourceExpression>Абонемент</sourceExpression>
+		<destinationExpression>Абонемент</destinationExpression>
+	</dataSetLink>
+	<totalField>
+		<dataPath>КоличествоПосещенийОборот</dataPath>
+		<expression>Сумма(КоличествоПосещенийОборот)</expression>
+		<group>Абонемент</group>
+		<group>ВидПосещения</group>
+		<group>КоличествоПосещенийОборот</group>
+		<group>Контрагент</group>
+		<group>Контрагент Иерархия</group>
+		<group>ПериодДень</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьНачальныйОстаток</dataPath>
+		<expression>Сумма(СтоимостьНачальныйОстаток)</expression>
+		<group>Абонемент</group>
+		<group>Контрагент</group>
+		<group>Контрагент Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьКонечныйОстаток</dataPath>
+		<expression>Сумма(СтоимостьКонечныйОстаток)</expression>
+		<group>Абонемент</group>
+		<group>Контрагент</group>
+		<group>Контрагент Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьПриход</dataPath>
+		<expression>Сумма(СтоимостьПриход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьРасход</dataPath>
+		<expression>Сумма(СтоимостьРасход)</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>ПериодОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ПериодОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>f1cb5024-45bb-4e34-b6ce-04967b0673a3</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ПериодДень</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">7</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СтоимостьНачальныйОстаток</dcsset:field>
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Остаток</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:column>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ПериодДень</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ВидПосещения</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:column>
+				<dcsset:column>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Стоимость</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СтоимостьПриход</dcsset:field>
+								<dcsset:lwsTitle>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Приход</v8:content>
+									</v8:item>
+								</dcsset:lwsTitle>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СтоимостьРасход</dcsset:field>
+								<dcsset:lwsTitle>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Расход</v8:content>
+									</v8:item>
+								</dcsset:lwsTitle>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СтоимостьКонечныйОстаток</dcsset:field>
+								<dcsset:lwsTitle>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Остаток</v8:content>
+									</v8:item>
+								</dcsset:lwsTitle>
+							</dcsset:item>
+							<dcsset:placement>Auto</dcsset:placement>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Контрагент</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Контрагент</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоПосещенийОборот</dcsset:field>
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Посещения</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Абонемент</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:row>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

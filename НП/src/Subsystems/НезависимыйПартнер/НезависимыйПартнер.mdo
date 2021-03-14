@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1876e345-f53b-44f5-89bf-a430c0b61489">
+  <name>НезависимыйПартнер</name>
+  <synonym>
+    <key>ru</key>
+    <value>Независимый партнер</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <picture xsi:type="core:PictureRef">
+    <picture>CommonPicture.Гербалайф_Компакт</picture>
+  </picture>
+  <content>Catalog.Контрагенты</content>
+  <content>InformationRegister.НаличиеЗаметокПоПредмету</content>
+  <content>CommonCommand.Служебная</content>
+  <content>Catalog.Номенклатура</content>
+  <content>Catalog.ВидыАбонементов</content>
+  <content>Catalog.НоменклатураПрисоединенныеФайлы</content>
+  <content>Catalog.АбонементыКонтрагента</content>
+  <content>Document.ПродажаАбонемента</content>
+  <content>AccumulationRegister.АбонементыКонтрагентов</content>
+  <content>AccumulationRegister.Взаиморасчеты</content>
+  <content>AccumulationRegister.ДенежныеСредства</content>
+  <content>Catalog.ТипыЦенНоменклатуры</content>
+  <content>Catalog.Склады</content>
+  <content>Document.УстановкаЦенНоменклатуры</content>
+  <content>InformationRegister.ЦеныНоменклатуры</content>
+  <content>AccumulationRegister.ТоварыНаСкладах</content>
+  <content>Document.ПоступлениеТоваров</content>
+  <content>Document.ПеремещениеТоваров</content>
+  <content>Document.РеализацияТоваров</content>
+  <content>AccumulationRegister.Продажи</content>
+  <content>InformationRegister.ПорционностьПродукта</content>
+  <content>AccumulationRegister.Посещения</content>
+  <content>Enum.ВидыОперцийДвиженияДенежныхСредств</content>
+  <content>323c2757-2975-4ec2-9b31-0e0fe0334389</content>
+  <subsystems>Справочники</subsystems>
+  <subsystems>Документы</subsystems>
+  <subsystems>Отчеты</subsystems>
+</mdclass:Subsystem>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="55f42e9a-3f2c-45e5-9589-3a0d5388e97b">
+  <producedTypes>
+    <selectionType typeId="3c8f8354-66bf-4f36-ad8d-8adaebe4b8ac" valueTypeId="2e031bfa-02b2-4d92-9cba-5bfc75d0dab8"/>
+    <listType typeId="a86a9898-9def-4312-811f-5f98ca91f16a" valueTypeId="e144c3fa-e2de-460f-85f0-31af5adc73c5"/>
+    <managerType typeId="7bf793ec-7f2b-4d5b-afd2-0923d03f40d1" valueTypeId="2717881d-f9d5-4467-b64b-77a019be1555"/>
+    <recordSetType typeId="c936ee2d-03d8-41a5-b5c9-e9d316b2cc26" valueTypeId="3b639edd-ea63-4a14-93b2-abf184a08957"/>
+    <recordKeyType typeId="3e567891-b603-4c12-abd6-242b906afc44" valueTypeId="9c4432f9-9043-4b2c-ac51-42fea3d2ed2e"/>
+    <recordType typeId="a7b79e2f-81a4-4aeb-b904-44c5c10b8286" valueTypeId="382c47d0-ae70-4332-92a9-1675b09c06b6"/>
+    <recordManagerType typeId="41b1d1e1-e1ee-48b8-8c23-426119bedfa3" valueTypeId="cf3d0063-a665-4b38-b501-dacdacf18200"/>
+  </producedTypes>
+  <name>НаличиеЗаметокПоПредмету</name>
+  <synonym>
+    <key>ru</key>
+    <value>Наличие заметок по предмету</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="7ebf3a8f-6e28-40e2-adaa-b424cbe31741">
+    <name>ЕстьЗаметки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Есть заметки</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Показывает наличие или отсутствие заметок по предмету</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="70901dc9-40c8-473f-b33f-8d47b16d5e3a">
+    <name>Предмет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Предмет</value>
+    </synonym>
+    <type>
+      <types>DefinedType.ПредметНапоминания</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Предмет заметки</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="6e0cf0a6-add4-440b-a65a-46c1a5b060d3">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Автор заметки</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <commands uuid="7beab256-e83f-48e6-a915-10c0d889507a">
+    <name>_ДемоНаличиеЗаметокПоПредмету</name>
+    <synonym>
+      <key>ru</key>
+      <value>Демо: Наличие заметок по предмету</value>
+    </synonym>
+    <group>NavigationPanelOrdinary</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:InformationRegister>

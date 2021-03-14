@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9a49e4bd-1b1e-45e1-af58-2f2f7307ea7e">
+  <producedTypes>
+    <objectType typeId="d6c0315b-f5a9-459f-8086-9ece939b5112" valueTypeId="d70d293e-c792-4ed5-89c5-8ca18d6c53f9"/>
+    <refType typeId="6f6b6b73-7c44-443b-afa0-21a68502e3c9" valueTypeId="4f979be5-027d-4551-ab5f-6ea40b83f44a"/>
+    <selectionType typeId="bdc53997-6947-4221-b331-105e9979cabe" valueTypeId="01c903f4-1943-4fc3-903c-f696efb492d3"/>
+    <listType typeId="3f0d3277-fdc7-4a68-9f4c-99f01342efb1" valueTypeId="f3affab4-15a7-439b-ae82-8188c6fbbe10"/>
+    <managerType typeId="d43cee21-1ea1-4af5-9b38-454df8bfdcff" valueTypeId="160046a5-d4c9-44c2-85ea-11febd6263b7"/>
+  </producedTypes>
+  <name>КорректировкаЗаписейРегистров</name>
+  <synonym>
+    <key>ru</key>
+    <value>Корректировка записей регистров</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.КорректировкаЗаписейРегистров.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Posted</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Date</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Number</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <fullTextSearch>Use</fullTextSearch>
+  <listPresentation>
+    <key>ru</key>
+    <value>Корректировки регистров</value>
+  </listPresentation>
+  <numberType>String</numberType>
+  <numberLength>11</numberLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.КорректировкаЗаписейРегистров.Form.ФормаДокумента</defaultObjectForm>
+  <posting>Deny</posting>
+  <registerRecordsDeletion>AutoDeleteOff</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <sequenceFilling>AutoFillOff</sequenceFilling>
+  <registerRecords>AccumulationRegister.Взаиморасчеты</registerRecords>
+  <registerRecords>InformationRegister.ЦеныНоменклатуры</registerRecords>
+  <registerRecords>AccumulationRegister.ТоварыНаСкладах</registerRecords>
+  <registerRecords>AccumulationRegister.Посещения</registerRecords>
+  <registerRecords>AccumulationRegister.ДенежныеСредства</registerRecords>
+  <registerRecords>AccumulationRegister.АбонементыКонтрагентов</registerRecords>
+  <registerRecords>AccumulationRegister.Продажи</registerRecords>
+  <registerRecords>InformationRegister.ПорционностьПродукта</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="02a37244-61be-4da3-8616-decddd602536">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Пользователь, оформивший документ.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <quickChoice>DontUse</quickChoice>
+    <createOnInput>Use</createOnInput>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>604931cd-d4a8-48d0-bc59-2ac90e044abb.00000000-0000-0000-0000-000000000000</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e5027383-ad76-4e70-bbbf-10831e866793">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Произвольный комментарий. </value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="8e2065ec-1e5b-4980-ad34-25d14f78531c">
+    <name>ФормаВыбораРегистра</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора регистра</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="f9f86258-8ef4-4f44-b4ff-86ea9bb47c08">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="92d20c8f-4c73-4a02-94ad-58513d0fc251">
+    <producedTypes>
+      <objectType typeId="be1112e0-d34a-47b7-96b1-4c20aff5d871" valueTypeId="7de46343-c4c0-4313-acf0-d3eab0ea3657"/>
+      <rowType typeId="5df412c8-5abc-4109-b56a-5865c1f68801" valueTypeId="4ba99e02-7153-4c95-a107-6972bea148fa"/>
+    </producedTypes>
+    <name>ТаблицаРегистров</name>
+    <synonym>
+      <key>ru</key>
+      <value>Таблица регистров</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="9b83efde-85b8-4d3a-be79-2974f439b89d">
+      <name>Имя</name>
+      <synonym>
+        <key>ru</key>
+        <value>Имя</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Имя регистра, которому скорректированы записи.</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

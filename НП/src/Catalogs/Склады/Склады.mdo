@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d0d43814-668a-4df3-be4e-5fa54b8150b1">
+  <producedTypes>
+    <objectType typeId="fd9f46c2-2df2-4f12-87ad-79a0246e7aac" valueTypeId="fdf6dbf9-92c4-49a3-8254-2ff69939e50e"/>
+    <refType typeId="e9628409-246e-4329-99ce-199c1c485b31" valueTypeId="53a9f18d-b2e7-483d-baaf-0f7faa1ca32e"/>
+    <selectionType typeId="a5b72c6d-c2d3-4b98-bcd9-1c3e65d207f2" valueTypeId="d37ca697-3796-4af5-be75-241e78da8f01"/>
+    <listType typeId="9775c149-890b-484c-8e07-b6cbb2087aee" valueTypeId="3196d46e-3c74-4245-8ef6-b61ff26cf6c0"/>
+    <managerType typeId="53c367c8-c59f-4d06-a8c6-69febad8d66d" valueTypeId="e87966b1-6bfc-4eff-809f-383cb2e16681"/>
+  </producedTypes>
+  <name>Склады</name>
+  <synonym>
+    <key>ru</key>
+    <value>Склады</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.Склады.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.Склады.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>10</codeLength>
+  <descriptionLength>50</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="2b964316-2462-45c1-b5de-fb1b2cb3a1dd">
+    <name>УчитыватьПродуктПорционно</name>
+    <synonym>
+      <key>ru</key>
+      <value>Учитывать продукт порционно</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+</mdclass:Catalog>
